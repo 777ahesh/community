@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Post } from "../../atoms/postsAtom";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
-import { FaReddit } from "react-icons/fa";
+import { FaMailchimp, FaReddit } from "react-icons/fa";
 import {
   IoArrowDownCircleOutline,
   IoArrowDownCircleSharp,
@@ -139,7 +139,7 @@ const PostItem: React.FC<PostItemProps> = ({
                     mr={2}
                   />
                 ) : (
-                  <Icon as={FaReddit} fontSize="18pt" mr={1} color="blue.500" />
+                  <Icon as={FaMailchimp} fontSize="18pt" mr={1} color="blue.500" />
                 )}
                 <Link href={`r/${post.communityId}`}>
                   <Text

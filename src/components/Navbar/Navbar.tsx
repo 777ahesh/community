@@ -1,4 +1,4 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Icon, Image } from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,6 +8,7 @@ import useDirectory from "../../hooks/useDirectory";
 import Directory from "./Directory/Directory";
 import RightContent from "./RightContent/RightContent";
 import SearchInput from "./SearchInput";
+import { FaMailchimp } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -26,9 +27,10 @@ const Navbar: React.FC = () => {
         cursor="pointer"
         onClick={() => onSelectMenuItem(defaultMenuItem)}
       >
-        <Image src="/images/redditFace.svg" height="30px" />
+        {/* <Image src="/images/community.png" height="30px" /> */}
+        <Icon as={FaMailchimp} height="30px" fontSize="18pt" mr={1} color="blue.500" />
         <Image
-          src="/images/redditText.svg"
+          src="/images/banner.png"
           height="46px"
           display={{ base: "none", md: "unset" }}
         />

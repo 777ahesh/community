@@ -16,7 +16,7 @@ import React, { useRef, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
-import { FaReddit } from "react-icons/fa";
+import { FaMailchimp, FaReddit } from "react-icons/fa";
 import { Community, communityState } from "../../atoms/communitiesAtom";
 import { auth, firestore, storage } from "../../firebase/clientApp";
 import useSelectFile from "../../hooks/useSelectFile";
@@ -132,7 +132,7 @@ const About: React.FC<AboutProps> = ({ communityData }) => {
                     />
                   ) : (
                     <Icon
-                      as={FaReddit}
+                      as={FaMailchimp}
                       fontSize={40}
                       color="brand.100"
                       mr={2}
