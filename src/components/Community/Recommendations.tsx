@@ -56,7 +56,7 @@ const Recommendations: React.FC = () => {
     >
       <Flex
         align="flex-end"
-        color="white"
+        color="grey"
         p="6px 10px"
         height="70px"
         borderRadius="4px 4px 0px 0px"
