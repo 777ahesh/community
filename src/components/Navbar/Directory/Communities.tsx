@@ -5,7 +5,7 @@ import { GrAdd } from "react-icons/gr";
 import { useRecoilValue } from "recoil";
 import { communityState } from "../../../atoms/communitiesAtom";
 import MenuListItem from "./MenuListItem";
-import { FaReddit } from "react-icons/fa";
+import { FaMailchimp } from "react-icons/fa";
 
 type CommunitiesProps = {};
 
@@ -25,7 +25,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
           .map((snippet) => (
             <MenuListItem
               key={snippet.communityId}
-              icon={FaReddit}
+              icon={FaMailchimp}
               displayText={`c/${snippet.communityId}`}
               link={`/c/${snippet.communityId}`}
               iconColor="brand.100"
@@ -51,7 +51,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
         {mySnippets.map((snippet) => (
           <MenuListItem
             key={snippet.communityId}
-            icon={FaReddit}
+            icon={FaMailchimp}
             displayText={`c/${snippet.communityId}`}
             link={`/c/${snippet.communityId}`}
             iconColor="blue.500"
