@@ -147,7 +147,7 @@ const usePosts = () => {
       ...prev,
       selectedPost: post,
     }));
-    router.push(`/r/${post.communityId}/comments/${post.id}`);
+    router.push(`/c/${post.communityId}/comments/${post.id}`);
   };
 
   const onDeletePost = async (post: Post): Promise<boolean> => {

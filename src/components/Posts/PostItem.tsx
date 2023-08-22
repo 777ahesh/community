@@ -71,7 +71,7 @@ const PostItem: React.FC<PostItemProps> = ({
 
       console.log("Post was successfully deleted");
       if (singlePostPage) {
-        router.push(`/r/${post.communityId}`);
+        router.push(`/c/${post.communityId}`);
       }
     } catch (error: any) {
       setError(error.message);
@@ -141,12 +141,12 @@ const PostItem: React.FC<PostItemProps> = ({
                 ) : (
                   <Icon as={FaMailchimp} fontSize="18pt" mr={1} color="blue.500" />
                 )}
-                <Link href={`r/${post.communityId}`}>
+                <Link href={`c/${post.communityId}`}>
                   <Text
                     fontWeight={700}
                     _hover={{ textDecoration: "underline" }}
                     onClick={(event) => event.stopPropagation()}
-                  >{`r/${post.communityId}`}</Text>
+                  >{`c/${post.communityId}`}</Text>
                 </Link>
                 <Icon as={BsDot} color="gray.500" fontSize={8} />
               </>

@@ -61,10 +61,10 @@ const Recommendations: React.FC = () => {
         height="70px"
         borderRadius="4px 4px 0px 0px"
         fontWeight={700}
-        bgImage="url(/images/recCommsArt.png)"
+        bgImage="url(/images/redditPersonalHome.png)"
         backgroundSize="cover"
         bgGradient="linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
-        url('images/recCommsArt.png')"
+        url('images/redditPersonalHome.png')"
       >
         Top Communities
       </Flex>
@@ -91,7 +91,7 @@ const Recommendations: React.FC = () => {
                 (snippet) => snippet.communityId === item.id
               );
               return (
-                <Link key={item.id} href={`/r/${item.id}`}>
+                <Link key={item.id} href={`/c/${item.id}`}>
                   <Flex
                     position="relative"
                     align="center"
@@ -127,7 +127,7 @@ const Recommendations: React.FC = () => {
                             textOverflow: "ellipsis",
                           }}
                         >
-                          {`r/${item.id}`}
+                          {`c/${item.id}`}
                         </span>
                       </Flex>
                     </Flex>

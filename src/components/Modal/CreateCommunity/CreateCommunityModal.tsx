@@ -75,7 +75,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
         // Check if community exists in db
         const communityDoc = await transaction.get(communityDocRef);
         if (communityDoc.exists()) {
-          throw new Error(`Sorry, r/${communityName} is taken. Try another.`);
+          throw new Error(`Sorry, c/${communityName} is taken. Try another.`);
         }
 
         // Create community
@@ -98,7 +98,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
 
       handleClose();
       toggleMenuOpen();
-      router.push(`r/${communityName}`);
+      router.push(`c/${communityName}`);
     } catch (error: any) {
       console.log("handleCreateCommunity error", error);
       setError(error.message);
@@ -136,7 +136,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                 width="20px"
                 color="gray.400"
               >
-                r/
+                c/
               </Text>
               <Input
                 position="relative"
