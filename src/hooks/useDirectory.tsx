@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { FaReddit } from "react-icons/fa";
+import { FaMailchimp } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import { communityState } from "../atoms/communitiesAtom";
 import {
@@ -44,7 +44,7 @@ const useDirectory = () => {
           displayText: `c/${currentCommunity.id}`,
           link: `/c/${currentCommunity.id}`,
           imageURL: currentCommunity.imageURL,
-          icon: FaReddit,
+          icon: FaMailchimp,
           iconColor: "blue.500",
         },
       }));
